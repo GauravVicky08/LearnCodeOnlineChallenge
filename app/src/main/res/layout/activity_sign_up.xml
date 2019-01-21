@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:padding="12dp"
+    tools:context=".SignUpActivity">
+
+    <LinearLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/lco_logo" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="right">
+
+            <TextView
+                android:id="@+id/signInText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sign_in"
+                android:textColor="@android:color/black"
+                android:textSize="20dp" />
+
+            <View
+                android:layout_width="60dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/signInText"
+                android:background="@android:color/black" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/createAccountText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl"
+        android:layout_marginTop="20dp"
+        android:text="@string/create_new_account"
+        android:textColor="@android:color/black"
+        android:textSize="20dp" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/username_text_input_layout"
+        style="@style/TextInputLayoutStyle"
+        android:layout_below="@+id/createAccountText">
+
+        <EditText
+            android:id="@+id/username_editText"
+            style="@style/LayoutStyle"
+            android:hint="@string/username" />
+    </android.support.design.widget.TextInputLayout>
+
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/email_text_input_layout"
+        style="@style/TextInputLayoutStyle"
+        android:layout_below="@+id/username_text_input_layout">
+
+        <EditText
+            android:id="@+id/email_editText"
+            style="@style/LayoutStyle"
+            android:hint="@string/email_address"
+            android:inputType="textEmailAddress" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/password_text_input_layout"
+        style="@style/TextInputLayoutStyle"
+        android:layout_below="@+id/email_text_input_layout"
+        app:passwordToggleEnabled="true">
+
+        <EditText
+            android:id="@+id/password_editText"
+            style="@style/LayoutStyle"
+            android:hint="@string/password"
+            android:inputType="textPassword" />
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:id="@+id/signUp"
+        style="@style/ButtonStyle"
+        android:layout_below="@+id/password_text_input_layout"
+        android:text="@string/sign_up" />
+
+    <TextView
+        android:id="@+id/otherSignInText"
+        style="@style/SignInWithText"
+        android:layout_below="@+id/signUp" />
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/otherSignInText"
+        android:layout_marginTop="8dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:layout_marginRight="12dp"
+            android:layout_weight="1"
+            android:backgroundTint="@android:color/white"
+            android:src="@drawable/ic_facebook_logo_in_circular"
+            app:backgroundTint="@android:color/white"
+            app:elevation="3dp" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:layout_marginRight="12dp"
+            android:layout_weight="1"
+            android:backgroundTint="@android:color/white"
+            android:src="@drawable/ic_google_plus_circular_button"
+            app:backgroundTint="@android:color/white"
+            app:elevation="3dp" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:layout_weight="1"
+            android:backgroundTint="@android:color/white"
+            android:src="@drawable/ic_twitter_circular_button"
+            app:backgroundTint="@android:color/white"
+            app:elevation="3dp" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/termAndCondition"
+        style="@style/LayoutStyle"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:text="@string/term_and_condion" />
+
+</RelativeLayout>
